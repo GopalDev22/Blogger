@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./header.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
+import { BiShoppingBag } from "react-icons/bi";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -11,8 +12,12 @@ const Header = () => {
         <section className="sec-mobile">
           <section className="header-mobile">
             <a href="/" className="logo">
-              <h1>Blogger</h1>
+              <h1>T-shirt Company</h1>
             </a>
+            <div className="cart-mobile">
+              <BiShoppingBag />
+              <span className="cart-count">8</span>
+            </div>
 
             {!showHeader ? (
               <BsThreeDotsVertical
@@ -32,16 +37,17 @@ const Header = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+                <a href="/men">Men</a>
               </li>
               <li>
-                <a href="/lifestyle">Lifestyle</a>
+                <a href="/women">Women</a>
               </li>
               <li>
-                <a href="/travel">Travels</a>
+                <a href="/about">About us</a>
               </li>
+
               <li>
-                <a href="/about">About me</a>
+                <a href="/login">Login</a>
               </li>
             </ul>
           )}
@@ -50,7 +56,7 @@ const Header = () => {
         <>
           <section>
             <a href="/" className="logo">
-              <h1>Blogger</h1>
+              <h1>T-shirt Company</h1>
             </a>
           </section>
           <ul className="navbar">
@@ -58,16 +64,20 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <a href="/men">Men</a>
             </li>
             <li>
-              <a href="/lifestyle">Lifestyle</a>
+              <a href="/women">Women</a>
             </li>
             <li>
-              <a href="/travel">Travels</a>
+              <a href="/about">About us</a>
+            </li>
+            <li className="cart-container">
+              <BiShoppingBag className="cart-icon" />
+              <span className="cart-count">8</span>
             </li>
             <li>
-              <a href="/about">About me</a>
+              <a href="/login">Login</a>
             </li>
           </ul>
         </>
