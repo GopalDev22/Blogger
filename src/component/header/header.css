@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.logo {
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  opacity: 1;
+}
+.navbar {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  list-style: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;
+  font-weight: 600;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    background-color: black;
+    opacity: 0.8;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .navbar a {
+    color: white;
+  }
+  .sec-mobile {
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    top: 0;
+  }
+  .header-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .logo {
+    opacity: 1;
+  }
+}
