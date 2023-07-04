@@ -12,7 +12,7 @@ const Header = () => {
         <section className="sec-mobile">
           <section className="header-mobile">
             <a href="/" className="logo">
-              <h1>T-shirt Company</h1>
+              <h1>T-shirt Factory</h1>
             </a>
             <div className="cart-mobile">
               <BiShoppingBag />
@@ -56,7 +56,7 @@ const Header = () => {
         <>
           <section>
             <a href="/" className="logo">
-              <h1>T-shirt Company</h1>
+              <h1>T-shirt Factory</h1>
             </a>
           </section>
           <ul className="navbar">

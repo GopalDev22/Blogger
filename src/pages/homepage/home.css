@@ -24,6 +24,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 }
 .btn-men {
   all: unset;
@@ -58,6 +59,7 @@
   gap: 1.2rem;
   align-items: center;
   font-size: 1.4rem;
+  text-align: center;
 }
 .btn-women {
   all: unset;
@@ -71,4 +73,87 @@
   color: black;
 
   background-color: #f1f6f9;
+}
+.brand-container {
+  padding: 1rem;
+  text-align: center;
+}
+.brand-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.brand {
+  text-align: center;
+  text-decoration: underline;
+}
+.brand-image {
+  max-width: 100%;
+  height: 20vh;
+}
+.brand-content-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .cover-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+  }
+  .cover-men {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+  .cover-men img {
+    max-width: 50vw;
+    max-height: 60vh;
+    aspect-ratio: 1 / 1;
+  }
+  .cover-women {
+    width: 100%;
+    max-height: 60vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border: none;
+  }
+  .cover-women img {
+    max-width: 50vw;
+    max-height: 60vh;
+  }
+  .brand-content-mobile {
+    display: block;
+  }
+  .brand-content {
+    display: none;
+  }
+  .cover-content-men {
+    position: absolute;
+    left: 2;
+    top: 10;
+    width: 100%;
+    height: 60vh;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    justify-content: center;
+  }
+  .btn-men {
+    border: 1px solid #f1f6f9;
+  }
+  .cover-content-women {
+    position: absolute;
+    left: 2;
+    top: 10;
+    width: 100%;
+    height: 60vh;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    justify-content: center;
+  }
 }
