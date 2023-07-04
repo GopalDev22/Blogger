@@ -1,6 +1,6 @@
 .cover-container {
   display: flex;
-
+  max-width: 100%;
   align-items: center;
   padding: 0 1rem;
 }
@@ -19,12 +19,19 @@
 }
 .cover-content-men {
   color: black;
+  position: static;
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   text-align: center;
+}
+.brand-collection {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn-men {
   all: unset;
@@ -155,5 +162,48 @@
     background-color: black;
     opacity: 0.7;
     justify-content: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cover-container {
+    flex-direction: column;
+  }
+  .cover-men {
+    background-color: white;
+    border: none;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .cover-content-men {
+    font-size: 2rem;
+  }
+  .cover-content-women {
+    font-size: 2rem;
+  }
+  .cover-women {
+    width: 100%;
+    background-color: black;
+    justify-content: space-evenly;
+  }
+  .cover-men img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/2;
+  }
+  .cover-women img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/2;
+  }
+  .brand-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .brand-content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
   }
 }

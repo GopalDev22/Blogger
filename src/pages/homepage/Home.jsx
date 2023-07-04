@@ -29,7 +29,24 @@ const Home = () => {
       <section className="cover-container">
         <section className="cover-men">
           <img src={men} alt="men pic" onClick={() => setToggleMen(true)} />
-          {toggleMen && (
+          {window.innerWidth < 600 ? (
+            toggleMen && (
+              <div
+                className="cover-content-men"
+                onClick={() => setToggleMen(false)}
+              >
+                <p>
+                  Shop exculsive Men <br /> T-shirts
+                </p>
+
+                <div>
+                  <button className="btn-men" onClick={() => navigate("/men")}>
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            )
+          ) : (
             <div
               className="cover-content-men"
               onClick={() => setToggleMen(false)}
@@ -52,7 +69,27 @@ const Home = () => {
             alt="women pic"
             onClick={() => setToggleWomen(true)}
           />
-          {toggleWomen && (
+          {window.innerWidth < 600 ? (
+            toggleWomen && (
+              <div
+                className="cover-content-women"
+                onClick={() => setToggleWomen(false)}
+              >
+                <p>
+                  Shop exculsive Women <br />
+                  T-shirts
+                </p>
+                <div>
+                  <button
+                    className="btn-women"
+                    onClick={() => navigate("/women")}
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            )
+          ) : (
             <div
               className="cover-content-women"
               onClick={() => setToggleWomen(false)}
