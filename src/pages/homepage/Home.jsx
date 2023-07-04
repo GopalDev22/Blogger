@@ -11,6 +11,7 @@ import polo from "../../assets/brands/polo.jpg";
 import peter from "../../assets/brands/peter.png";
 import allen from "../../assets/brands/allen.png";
 import Carousel from "../../component/Carousel";
+import Login from "../Login/Login";
 
 const brands = [addidas, polo, puma, peter, nike, roadster, allen];
 
@@ -26,6 +27,7 @@ const Home = () => {
   ));
   return (
     <main>
+      <Login />
       <section className="cover-container">
         <section className="cover-men">
           <img src={men} alt="men pic" onClick={() => setToggleMen(true)} />

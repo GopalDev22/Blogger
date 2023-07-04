@@ -7,19 +7,21 @@ import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
 import AboutMe from "./pages/aboutme/AboutMe";
 import Login from "./pages/Login/Login";
+import { AuthContextProvider } from "./context/AuthContext";
 
 const App = () => {
   return (
     <main className="app">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/men" element={<Men />} />
-        <Route path="/women" element={<Women />} />
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/Login" element={<Login />} />
-      </Routes>
-      <Footer />
+      <AuthContextProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/men" element={<Men />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/about" element={<AboutMe />} />
+        </Routes>
+        <Footer />
+      </AuthContextProvider>
     </main>
   );
 };

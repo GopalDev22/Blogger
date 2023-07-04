@@ -3,9 +3,19 @@ import "./header.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
 import { BiShoppingBag } from "react-icons/bi";
+import { UserAuth } from "../../context/AuthContext";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
+  const { user, logOut, setOpenModal } = UserAuth();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(user);
   return (
     <main className="header">
       {window.innerWidth < 768 ? (
@@ -47,7 +57,11 @@ const Header = () => {
               </li>
 
               <li>
-                <a href="/login">Login</a>
+                {user ? (
+                  <button onClick={handleLogout}>logout</button>
+                ) : (
+                  <button onClick={() => setOpenModal(true)}>Login</button>
+                )}
               </li>
             </ul>
           )}
@@ -77,7 +91,11 @@ const Header = () => {
               <span className="cart-count">8</span>
             </li>
             <li>
-              <a href="/login">Login</a>
+              {user ? (
+                <button onClick={handleLogout}>logout</button>
+              ) : (
+                <button onClick={() => setOpenModal(true)}>Login</button>
+              )}
             </li>
           </ul>
         </>
