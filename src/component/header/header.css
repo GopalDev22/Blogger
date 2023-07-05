@@ -36,6 +36,9 @@
   opacity: 0.6;
   transition: all 0.3s ease;
 }
+.avatar:hover {
+  border-bottom: none !important;
+}
 .logo h1 {
   text-shadow: 2px 2px 2px black;
 }

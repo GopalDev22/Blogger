@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
 import { BiShoppingBag } from "react-icons/bi";
 import { UserAuth } from "../../context/AuthContext";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -15,7 +16,10 @@ const Header = () => {
       console.log(error);
     }
   };
-  console.log(user);
+
+  const userName = user?.displayName?.split(" ")[0];
+
+  // console.log(userName);
   return (
     <main className="header">
       {window.innerWidth < 768 ? (
@@ -55,14 +59,6 @@ const Header = () => {
               <li>
                 <a href="/about">About us</a>
               </li>
-
-              <li>
-                {user ? (
-                  <button onClick={handleLogout}>logout</button>
-                ) : (
-                  <button onClick={() => setOpenModal(true)}>Login</button>
-                )}
-              </li>
             </ul>
           )}
         </section>
@@ -73,6 +69,7 @@ const Header = () => {
               <h1>T-shirt Factory</h1>
             </a>
           </section>
+
           <ul className="navbar">
             <li>
               <a href="/">Home</a>
@@ -90,12 +87,11 @@ const Header = () => {
               <BiShoppingBag className="cart-icon" />
               <span className="cart-count">8</span>
             </li>
+
             <li>
-              {user ? (
-                <button onClick={handleLogout}>logout</button>
-              ) : (
-                <button onClick={() => setOpenModal(true)}>Login</button>
-              )}
+              <a href="/profile" className="avatar">
+                <FaUserAlt />
+              </a>
             </li>
           </ul>
         </>

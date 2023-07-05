@@ -8,6 +8,7 @@ import Women from "./pages/women/Women";
 import AboutMe from "./pages/aboutme/AboutMe";
 import Login from "./pages/Login/Login";
 import { AuthContextProvider } from "./context/AuthContext";
+import Profile from "./pages/profile/Profile";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/about" element={<AboutMe />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </AuthContextProvider>
