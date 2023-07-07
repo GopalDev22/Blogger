@@ -1,6 +1,7 @@
 import React from "react";
 import { UserAuth } from "../../context/AuthContext";
 import GoogleButton from "react-google-button";
+import Login from "../../component/login/Login";
 
 const Profile = () => {
   const { user, googleSignIn } = UserAuth();
@@ -15,12 +16,7 @@ const Profile = () => {
   return (
     <div>
       {user ? (
-        <div>
-          <h3>Hey! {user?.displayName}.</h3>
-          <h4>Welcome to T-shirt Factory!</h4>
-          <p>Seems your cart is empty. Explore our exclusive collection.</p>
-          <h3>Happy Shopping!!</h3>
-        </div>
+        <Login />
       ) : (
         <div>
           <h3>Hello!</h3>

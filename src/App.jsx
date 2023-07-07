@@ -6,7 +6,6 @@ import Home from "./pages/homepage/Home";
 import Men from "./pages/men/Men";
 import Women from "./pages/women/Women";
 import AboutMe from "./pages/aboutme/AboutMe";
-import Login from "./pages/Login/Login";
 import { AuthContextProvider } from "./context/AuthContext";
 import Profile from "./pages/profile/Profile";
 
